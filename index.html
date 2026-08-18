@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Glideline — modern traditional menswear from Lagos.">
+  <title>Glideline — Modern Traditional Wear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to collection</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Glideline home">GLIDELINE</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#collection">Trads</a>
+      <a href="#videos">Videos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="header-picks" id="header-picks" type="button" hidden aria-controls="picks-tray">Picks <span>0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">Lagos · Nigeria</p>
+      <h1 id="intro-title">GLIDELINE</h1>
+      <p id="tagline">Modern traditional wear for men.</p>
+    </section>
+
+    <section class="collection shell" id="collection" aria-labelledby="collection-title">
+      <p class="eyebrow">The collection</p>
+      <h2 id="collection-title">Traditional, made modern.</h2>
+      <div class="collection-rule" aria-hidden="true"></div>
+      <div class="filter-bar">
+        <span class="filter-label">Filter</span>
+        <div class="filters" id="filters" role="group" aria-label="Filter collection"></div>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No pieces in this collection yet.</p>
+    </section>
+
+    <section class="feature-section shell" id="videos" aria-labelledby="videos-title">
+      <div class="ghost-title"><span aria-hidden="true">MOVEMENT</span><h2 id="videos-title">See how they move.</h2></div>
+      <div class="video-grid" id="video-grid"></div>
+    </section>
+
+    <section class="feature-section contact shell" id="contact" aria-labelledby="contact-title">
+      <div class="ghost-title"><span aria-hidden="true">TOGETHER</span><h2 id="contact-title">Made around you.</h2></div>
+      <p class="contact-copy">Reach out on WhatsApp — we’ll talk fabric, take your measurements, and give you a timeline.</p>
+      <a class="primary-button" id="whatsapp-link" href="#">Talk to us on WhatsApp</a>
+      <a class="text-link" id="instagram-link" href="#" target="_blank" rel="noopener">Instagram</a>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div><a class="wordmark" href="#top">GLIDELINE</a></div>
+    <div><a href="#collection">Collection</a><a href="#videos">Videos</a></div>
+    <div><a id="footer-whatsapp" href="#">WhatsApp</a><a id="footer-instagram" href="#" target="_blank" rel="noopener">Instagram</a></div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-name">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <div class="lightbox-media">
+      <button class="lightbox-arrow previous" type="button" aria-label="Previous image">←</button>
+      <img id="lightbox-image" src="" alt="" width="900" height="1200">
+      <button class="lightbox-arrow next" type="button" aria-label="Next image">→</button>
+      <p class="image-count" id="image-count"></p>
+    </div>
+    <div class="lightbox-details">
+      <p class="eyebrow" id="lightbox-code"></p>
+      <h2 id="lightbox-name"></h2>
+      <p id="lightbox-note"></p>
+      <div class="lightbox-actions">
+        <a class="primary-button" id="lightbox-enquire" href="#">Enquire on WhatsApp</a>
+        <button class="secondary-button" id="lightbox-pick" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="picks-tray" id="picks-tray" hidden aria-label="Your picks">
+    <div class="picks-bar">
+      <button class="picks-summary" id="picks-summary" type="button" aria-expanded="false" aria-controls="picks-panel"></button>
+      <a id="send-picks" href="#">Send to Glideline <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="picks-panel" id="picks-panel" hidden>
+      <div class="picks-panel-heading">
+        <p>Your picks</p>
+        <button id="close-picks" type="button" aria-label="Close picks">×</button>
+      </div>
+      <ul id="picks-list"></ul>
+    </div>
+  </aside>
+
+  <script src="data/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/videos.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
